@@ -1,6 +1,6 @@
 # Igris Inertial Go SDK
 
-Go client for [Igris Inertial](https://igris-inertial.com) -- the AI inference gateway with multi-provider routing, SLO enforcement, fleet management, and BYOK vault.
+Go client for [Igris Inertial](https://igris-inertial.com) — an agent execution platform that runs AI workflows inside a Rust runtime with deterministic containment, Ed25519-signed execution receipts, and multi-provider inference routing.
 
 ## Installation
 
@@ -42,14 +42,15 @@ func main() {
 
 ## Features
 
-- **Zero dependencies** -- Uses only the standard library
+- **Zero dependencies** — Uses only the standard library
 - **Context support** on all methods
 - **Functional options** for client configuration
-- **Multi-provider inference** -- Route across OpenAI, Anthropic, Google, and more
-- **Provider management** -- Register, test, and monitor providers
-- **BYOK vault** -- Securely store and rotate your own API keys
-- **Fleet management** -- Register and monitor inference agents
-- **Usage tracking** -- Monitor costs and token usage
+- **Deterministic agent execution** — Agents run inside the Igris Runtime with enforced CPU, memory, and I/O containment bounds
+- **Cryptographic execution receipts** — Ed25519-signed resource-accounting data with hash-chained tamper evidence; opt-in verification with `VerifyReceipt`
+- **Multi-provider inference routing** — Route across OpenAI, Anthropic, Google, and more with SLO-based fallback
+- **BYOK vault** — Securely store and rotate your own provider API keys
+- **Fleet management** — Register and monitor agent fleets
+- **Usage tracking** — Monitor costs and token usage
 
 ## API
 
